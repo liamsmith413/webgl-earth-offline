@@ -1,33 +1,31 @@
-WebGL Earth offline demo
-========================
+# WebGL Earth Offline Demo
 
-The WebGL Earth API with custom tiles derived from Natural Earth data.
+This repository demonstrates the WebGL Earth API using custom map tiles derived from Natural Earth data.
 
-Tiles rendered by MapTiler (http://www.maptiler.com/).
-For preparing custom map tiles see this step-by-step tutorial: http://www.maptiler.com/how-to/3d-online-globe/
+The tiles are rendered using [MapTiler](http://www.maptiler.com/). For guidance on creating custom map tiles, refer to this [step-by-step tutorial](http://www.maptiler.com/how-to/3d-online-globe/).
 
-Download and unzip this repository (or clone it with git):
-https://github.com/webglearth/webglearth2-offline/archive/gh-pages.zip
+## Getting Started
 
-This example runs offline as well, but the data must be opened over HTTP protocol.
+1. Download and extract this repository, or clone it using Git:
+    ```
+    git clone https://github.com/liamsmith413/webgl-earth-offline
+    ```
+2. Note that this example runs offline but requires serving the files over the HTTP protocol. Directly opening the HTML file in a browser will not work due to security restrictions on loading WebGL textures.
 
-Direct opening of the HTML file in a downloaded directory is unfortunatelly not possible because of the default security restrictions of the web browser for loading WebGL textures.
+3. To view the globe, host the files on a web server. Once hosted, the application will function as expected.
 
-Once the globe is hosted on your webserver it runs perfectly.
+## Local Development
 
-To develop and work with this example locally on your computer:
+To develop locally, ensure you are running an HTTP server. For example, you can use Python's built-in HTTP server:
 
-A) either turn off temporarily the security restrictions of your web browser. See:
-https://github.com/mrdoob/three.js/wiki/How-to-run-things-locally#change-local-files-security-policy
+```bash
+python -m http.server
+```
 
-B) or start in the directory with the code a simple web server with the command:
+## Live Demo
 
-$ python -m SimpleHTTPServer
+A live demo is available at: [https://webgl-earth-offline.vercel.app/](https://webgl-earth-offline.vercel.app/)
 
-then you can (even without connection to Internet) open the globe at:
+## Demo Video
 
-http://localhost:8000/
-
-and you should see this:
-
-![WebGL Earth Offline](https://cloud.githubusercontent.com/assets/59284/5442815/cc863142-849c-11e4-8b1b-47b78eafc3ab.jpg)
+Watch the demo video: [demo/demo.mp4](demo/demo.mp4)
